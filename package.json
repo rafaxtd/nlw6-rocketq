@@ -4,7 +4,7 @@
   "description": "Web project developped by Rocketseat to manage question rooms",
   "main": "src/server.js",
   "scripts": {
-    "start": "node ./src/server.js",
+    "start": "node src/server.js",
     "init-db": "node ./src/db/init.js"
   },
   "keywords": [],
