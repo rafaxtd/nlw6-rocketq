@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rocket.q - Room questions and answers</title>
+
+    <link rel="stylesheet" href="/styles/room.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="room" class="content">
+      <header>
+        <a href="/"><img src="/assets/logo.svg" alt="rocket.q logo" /></a>
+
+        <div class="buttons">
+          <button class="button outlined clipboard" data-clipboard-text="<%= roomID %>" id="room-id" data-id="<%= roomID %>">
+            #<%= roomID %>
+            <img src="/assets/copy.svg" alt="Copy room number" />
+          </button>
+          <div>
+            <a href="/" class="button">
+              <img src="/assets/user-inside.svg" alt="Create a new room" />
+              Create room
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="question-form">
+          <h2>Make a question</h2>
+          <form action="/question/create/<%= roomID %> " method="post">
+            <lablel class="src-only" for-id="">What do you want to ask?</lablel>
+            <textarea
+              name="question"
+              id="question"
+              placeholder="What do you want to ask?"
+            ></textarea>
+
+            <footer>
+              <div class="footer">
+                <img src="/assets/lock.svg" alt="Lock icon" />
+                <p>This question is anonymous</p>
+              </div>
+              <button>Send</button>
+            </footer>
+          </form>
+        </section>
+
+        <section id="questions">
+          <h2 class="src-only">Community questions</h2>
+
+          <div class="questions">
+
+            <% if (noQuestions) { %>
+
+              <%- include('parts/no-questions') %> 
+
+            <% } %>
+
+            <% questions.forEach(question => { %>
+
+            <div class="question-wrapper">
+              <div class="question-content">
+                <div class="user">
+                  <img src="/assets/user-question.svg" alt="Avatar icon" />
+                </div>
+                <div class="question">
+                  <p><%= question.content %></p>
+                </div>
+              </div>
+              <div class="actions">
+                <a href="#" class="read" data-id="<%= question.id %>"
+                  ><img
+                    src="/assets/read-question.svg"
+                    alt="Marks as read message"
+                  />Mark as read</a
+                >
+                <a href="#" class="delete" data-id="<%= question.id %>"
+                  ><img src="/assets/delete.svg" alt="Delete message" />Delete
+                  message</a
+                >
+              </div>
+            </div>
+
+           
+
+            <% }) %> <% questionsRead.forEach(questionRead => { %>
+
+            <div class="question-wrapper read">
+              <div class="question-content">
+                <div class="user">
+                  <img src="/assets/user-question.svg" alt="Avatar icon" />
+                </div>
+                <div class="question">
+                  <p><%= questionRead.content %> </p>
+                </div>
+              </div>
+              <div class="actions">
+                <a href="#" class="read" data-id="<%= questionRead.id %> "
+                  ><img
+                    src="/assets/read-question.svg"
+                    alt="Marks as read message"
+                  />Read</a
+                >
+              </div>
+            </div>
+
+            
+
+            <% }) %>
+
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h2></h2>
+        <p></p>
+
+        <div class="content">
+          <form action="#" method="post">
+            <label for="" class="src-only">Type your admin password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Type your admin password"
+              class=""
+            />
+
+            <div class="buttons">
+              <div class="button cancel gray">Cancel</div>
+              <button class=""></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+  <script src="/scripts/main.js" defer type="module"></script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Room - rocket.q</title>
+   
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/global.css">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+      <div id="home" class="content">
+            <header>
+            <a href="/"> <img src="/assets/logo.svg" alt="rocket.q logo" /> </a>
+            </header>
+
+            <div id="bg" class="container">
+                <div class="ball top"></div>
+                <div class="ball bottom"></div>
+
+            </div>
+            <main>
+            <div class="container">
+
+                <!-- Rendering page parts that uses same -->
+
+                <%- include(`parts/${page}`) %>
+        
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
