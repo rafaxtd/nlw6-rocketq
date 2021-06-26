@@ -15,5 +15,5 @@ server.use(express.urlencoded({extended: true}));
 server.use(routes);
 
 
-server.listen(3000, () => console.log("running"));
+server.listen(process.env.PORT || 3000, () => console.log("running"));
 
