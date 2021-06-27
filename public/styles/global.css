@@ -147,10 +147,13 @@ button.gray,
     
     
     .content {
-       display: flex;
-       flex-direction: column;
-
-       align-items: center;
+       
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;  
+        margin-left: 2rem;
+        width: min(80vw, 800px);
+       
     }
 
     .content header img {
@@ -171,7 +174,7 @@ button.gray,
 body, button, input, textarea, footer {
     font-size: 1rem;
     word-wrap: break-word;
-    
+    overflow: hidden;
 
 
 }  

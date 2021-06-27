@@ -136,7 +136,12 @@ div.not-found {
        align-items: center;
     }
 
-   
+    .separator {
+        
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+    }
 
 
   #bg {
@@ -145,26 +150,19 @@ div.not-found {
   }
 
   .container {
-      margin-top: 10rem;
-      margin-left: 2rem;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+    gap: 2rem;
+    padding: 20rem 0 20rem 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  
 
   .ball.top {
     width: 59rem;
     height: 59rem;
 
-    
+  }
 
-}
-   
-    
-
-   
-    
-    
-    
 }
