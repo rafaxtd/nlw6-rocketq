@@ -151,7 +151,7 @@ div.not-found {
 
       position: absolute;
 
-      margin-top: 52.5rem;
+      margin-top: 40rem;
       margin-left: -2rem;
     background-position: center;
     background-position-x: -5rem;
@@ -163,15 +163,15 @@ div.not-found {
 
 
   
-    width: 80.5%;
+    width: 90%;
 
   }
 
   .container {
     margin-top: 0;
     margin-left: 0;
-    gap: 2rem;
-    padding: 15rem 0 20rem 2rem;
+    /* gap: 2rem; */
+    padding: 15rem 0 15rem 2rem;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -184,7 +184,43 @@ div.not-found {
   }
 
 }
-   
+
+@media only screen and (max-width: 980px) {
+
+    .container {
+        margin-top: 0;
+        margin-left: 0;
+        gap: 1rem;
+        padding: 5rem 0 10rem 2rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+     
+
+  
+  #bg {
+    /* background: none;  */
+    padding: 0;
+    display:grid;
+
+    position:absolute;
+    /* margin-top: 60rem; */
+    margin-left: -2rem;
+  background-position: center center bottom;
+  /* background-position-x: 100rem; */
+  /* background-position-y: 100rem; */
+  opacity: .7;
+  z-index: 0;
+  
+/* width: 80% */
+
+  /* padding: 1rem; */
+
+  }
+
+}
     
 
    
