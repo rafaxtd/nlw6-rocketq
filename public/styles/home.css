@@ -145,15 +145,33 @@ div.not-found {
 
 
   #bg {
-      background: none; 
-      
+      /* background: none;  */
+      /* padding: 0 20rem; */
+      display: flex;
+
+      position: absolute;
+
+      margin-top: 40rem;
+      margin-left: -2rem;
+    background-position: center;
+    background-position-x: -5rem;
+    background-position-y: 10rem;
+    opacity: .7;
+
+    /* padding: 1rem; */
+
+
+
+  
+    width: 90%;
+
   }
 
   .container {
     margin-top: 0;
     margin-left: 0;
     gap: 2rem;
-    padding: 20rem 0 20rem 2rem;
+    padding: 15rem 0 20rem 2rem;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -166,3 +184,11 @@ div.not-found {
   }
 
 }
+   
+    
+
+   
+    
+    
+    
+
